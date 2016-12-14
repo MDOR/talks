@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+      <link rel="stylesheet" href="app/site.css">
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section class="first-slide">
+                  <h1>React Introduction</h1>
+                  <h2>By <a href="https://mx.linkedin.com/in/marco-antonio-dominguez-rueda-a3a974aa" target="_blank" class="special-links">Marco Antonio Domínguez</a></h2>
+                  <img src="app/img/react.png" class="image-logo"/>
+                </section>
+                <section style="position: relative">
+                  <h1>About</h1>
+                  <div class="content-container">
+                      <div class="col-6">
+                        <img src="app/img/cool_glasses.png" alt="" class="cool_glasses"/>
+                        <img src="app/img/cartoon_profile.png" alt="" class="img-resposive"/>
+                      </div>
+                      <div class="col-6 align-left about">
+                        <p>Marco Antonio Domínguez is a Computer System Engineer, JavaScript Lover and Web Developer.</p>
+                        <ul>
+                          <li><a href="https://mx.linkedin.com/in/marco-antonio-dominguez-rueda-a3a974aa" target="_blank" class="special-links">Linkedin</a></li>
+                          <li><a href="https://github.com/MDOR" target="_blank" class="special-links">GitHub</a></li>
+                        </ul>
+                      </div>
+                  </div>
+                </section>
+                <section>
+                  <h2>What is React?</h2>
+                  <div class="content-container">
+                    <p>React is a JS library to build UI components.</p>
+                    <p>React is recommended to build large application with data that changes over the time, React will manage all the UI updates.</p>
+                  </div>
+                </section>
+                <section>
+                  <h2>JSX</h2>
+                  <div class="content-container">
+                    <p>JSX is an optional XML-like syntax extension to ECMAScript that can be used to define a HTML tree structure in a JavaScript file.</p>
+                    <p>The JSX expressions will be transformed to JavaScript.</p>
+                  </div>
+                  <pre class="prettyprint lang-html">
+/*Syntax React*/
+var Component = React.createClass('p', {className: 'my-component'}, 'texto')
+
+/*Syntax JSX*/
+var Component = React.createClass({
+                  render : function () {
+                    return (&#60p className="my-component"&#62 texto &#60/p&#62)
+                  }
+                })
+</pre>
+              </section>
+              <section>
+                <h2>React concepts</h2>
+                <h3>Props</h3>
+                <p> Provide configuration values for the component, these values aren't mutable (read only).</p>
+                <h3>States</h3>
+                <p>States are used to store information about the component that can change over the time.</p>
+                <h3>Vitual Dom</h3>
+                <p>Fake DOM stored in memory to check any change into the component.</p>
+              </section>
+              <section>
+                <h2>States vs Props</h2>
+                <ul>
+                  <li>Both are plain objects</li>
+                  <li>Both can have default values</li>
+                  <li>Both are accessed via this</li>
+                <ul>
+              </section>
+              <section>
+                <h2>Props</h2>
+                <ul>
+                  <li>Props are passed into a component from above, either a parent component or from the starting scope where React is originally rendered.</li>
+                  <li>Props are intended as configuration values passed into the component.</li>
+                  <li>Props are immutable to the component receiving them.</li>
+                </ul>
+              </section>
+              <section>
+                <h2>States</h2>
+                <ul>
+                  <li>State should always start with a default value and then the state is mutated internally by the component using setState.</li>
+                  <li>I'ts private.</li>
+                  <li>It should contain just the information to handle changes into the UI.</li>
+                </ul>
+              </section>
+              <section>
+                <h2>Events</h2>
+                <p>Events can be added to DOM nodes, React can handle events for:</p>
+                <ul>
+                  <li>Clipboard</li>
+                  <li>Keyboard</li>
+                  <li>Focus</li>
+                  <li>Form</li>
+                  <li>Mouse</li>
+                  <li>Touch</li>
+                  <li>Image</li>
+                </ul>
+                <p>Also we can use stopPropagation and preventDefault.</p>
+              </section>
+              <section>
+                <h2>Lyfecycle Methods</h2>
+                <ul>
+                  <li>getInitialState: Return value is the initial value for state.</li>
+                  <li>getDefaultProps: Sets fallback props values if props aren’t supplied.</li>
+                  <li>componentWillMount: Invoked once, on both client & server before rendering occurs.</li>
+                  <li>componentDidMount: Invoked once, only on the client, after rendering occurs.</li>
+                  <li>shouldComponentUpdate: Return value determines whether component should update.</li>
+                  <li>componentWillUnmount: Invoked prior to unmounting component.</li>
+                </ul>
+              </section>
+              <section>
+                <h2>Birth</h2>
+                <ul>
+                  <li>Initialize</li>
+                  <li>getDefaultProps</li>
+                  <li>getInitialState</li>
+                  <li>componentWillMount</li>
+                  <li>render</li>
+                  <li>Children lifecycle</li>
+                  <li>componentDidMount</li>
+                </ul>
+              </section>
+              <section>
+                <h2>Update</h2>
+                <ul>
+                  <li>componentWillReceiveProps</li>
+                  <li>shouldComponentUpdate</li>
+                  <li>componentWillUpdate</li>
+                  <li>Children lifecycle</li>
+                  <li>render</li>
+                  <li>componentDidUpdate</li>
+                </ul>
+              </section>
+              <section>
+                <h2>Death</h2>
+                <ul>
+                  <li>componentWillUnmounh</li>
+                  <li>Children lifecycle</li>
+                  <li>Garbage Collection</li>
+                </ul>
+              </section>
+              <section>
+                <p>
+                  Questions?
+                </p>
+              </section>
+            </div>
+        </div>
+        <script src="app/site.js" async></script>
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js" async></script>
+    </body>
+</html>
