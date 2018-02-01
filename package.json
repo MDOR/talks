@@ -1,0 +1,69 @@
+{
+  "name": "J4_Guanatos",
+  "version": "0.8.0",
+  "description": "Explore multiple animations and its differences, in this case we will be focus on JavaScript approach",
+  "main": "index.js",
+  "engines": {
+    "node": "6.1.x",
+    "npm": "3.8.x"
+  },
+  "scripts": {
+    "scaffolding": "npm run test-structure && npm run move-assets:dev",
+    "scaffolding:prod": "npm run test-structure && npm run move-assets:prod",
+    "test-structure": "babel-node --presets es2015 scripts/test-folders",
+    "move-assets:dev": "babel-node --presets es2015 scripts/move-assets",
+    "move-assets:prod": "babel-node --presets es2015 scripts/move-assets --env=production",
+    "watch": "npm run build:dev && babel-node --presets es2015 ./node_modules/gulp/bin/gulp.js watch --reload=true",
+    "build:dev": "npm run scaffolding && babel-node --presets es2015 ./node_modules/gulp/bin/gulp.js build --env=development",
+    "build:prod": "npm run scaffolding:prod && babel-node --presets es2015 ./node_modules/gulp/bin/gulp.js build --env=production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tequila-js/javascript_animations.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "animations",
+    "CSS3",
+    "requestFrameAnimation"
+  ],
+  "author": "",
+  "license": "MIT ",
+  "bugs": {
+    "url": "https://github.com/Tequila-js/javascript_animations/issues"
+  },
+  "homepage": "https://github.com/Tequila-js/javascript_animations#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "connect": "^3.6.2",
+    "eslint": "^3.19.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-html-minifier": "^0.1.8",
+    "gulp-if": "^2.0.2",
+    "gulp-inject": "^4.2.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-webpack": "^1.5.0",
+    "open": "0.0.5",
+    "serve-static": "^1.12.3",
+    "webpack": "2.2.0",
+    "yargs": "^8.0.1"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "reveal": "0.0.4"
+  }
+}

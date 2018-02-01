@@ -1,0 +1,74 @@
+$blue: #228DFF;
+
+html {
+  font-size: 12px;
+}
+
+body {
+  background: black;
+  color: white;
+  font-family: 'Open Sans', Helvetica !important;
+}
+
+a {
+  color: $blue;
+}
+
+.title {
+  animation: neon 1s ease-in-out infinite alternate;
+  &.primary {
+    font-size: 8rem !important; 
+  }
+  &.secondary {
+    font-size: 6rem !important;
+  }
+}
+
+/* Container */
+.container {
+  white-space: nowrap;
+}
+
+.content {
+  margin-top: 1rem !important;
+  display: inline-block;
+  white-space: pre-wrap;
+  font-size: 1.75rem !important;
+  line-height: 2rem;
+   
+   li {
+    font-size: 1.75rem !important;
+    line-height: 2rem;
+   }
+}
+
+.profile-container {
+  width: 25%;
+}
+
+.abstract {
+  width: 75%;
+}
+
+.social-media {
+  width: 100px;
+}
+
+/* Images. */
+.profile {
+  width: 100%;
+}
+
+.responsive {
+  width: 100%;
+}
+
+/* Primary */
+@-webkit-keyframes neon {
+  from {
+    text-shadow: 0 0 1rem #fff, 0 0 2rem #fff, 0 0 3rem #fff, 0 0 4rem $blue, 0 0 6rem $blue, 0 0 7rem $blue, 0 0 9rem $blue, 0 0 12rem $blue;
+  }
+  to {
+    text-shadow: 0 0 .5rem #fff, 0 0 1rem #fff, 0 0 1.5rem #fff, 0 0 2rem $blue, 0 0 2.5rem $blue, 0 0 3rem $blue, 0 0 3.5rem $blue, 0 0 4rem $blue;
+  }
+}
