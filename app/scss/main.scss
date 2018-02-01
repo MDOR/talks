@@ -16,12 +16,17 @@ a {
 
 .title {
   animation: neon 1s ease-in-out infinite alternate;
+  margin-bottom: .5rem !important;
   &.primary {
-    font-size: 8rem !important; 
+    font-size: 8rem !important;
   }
   &.secondary {
     font-size: 6rem !important;
   }
+}
+
+.align-top {
+  vertical-align: top !important;
 }
 
 /* Container */
@@ -35,10 +40,11 @@ a {
   white-space: pre-wrap;
   font-size: 1.75rem !important;
   line-height: 2rem;
-   
+  text-align: left;
+
    li {
     font-size: 1.75rem !important;
-    line-height: 2rem;
+    line-height: 2.4rem;
    }
 }
 
@@ -48,6 +54,10 @@ a {
 
 .abstract {
   width: 75%;
+}
+
+.half {
+  width: 45%;
 }
 
 .social-media {
@@ -61,6 +71,10 @@ a {
 
 .responsive {
   width: 100%;
+}
+
+figure img {
+  margin-bottom: 1rem !important;
 }
 
 /* Primary */
